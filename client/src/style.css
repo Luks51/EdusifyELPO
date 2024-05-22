@@ -1,0 +1,2218 @@
+/* Global Style */
+
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+:root {
+  --primary-color: rgb(21, 21, 29);
+  --secondary-color: rgb(255, 255, 255);
+
+  --d: 5000ms;
+  --angle: 90deg;
+  --gradX: 100%;
+  --gradY: 50%;
+  --c1: rgba(156, 70, 236, 1);
+  --c2: rgba(168, 239, 255, 0.1);
+}
+
+.light-theme {
+  --primary-color: rgb(255, 255, 255);
+  --secondary-color: rgb(15, 15, 15);
+}
+
+body {
+  background-color: var(--primary-color);
+  font-family: "Lato", sans-serif;
+  color: white;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+a {
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+}
+
+.page-error {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  text-align: center;
+  margin: 0 auto;
+  color: rgba(255, 82, 82, 0.75);
+  padding: 150px 0;
+}
+
+.form-validation {
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(255, 82, 82, 0.75);
+  max-width: 200px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.form-validation-submit {
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(255, 82, 82, 0.75);
+  max-width: 200px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.form-validation-success {
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(49, 211, 8, 0.75);
+  max-width: 300px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.form-validation li {
+  padding-top: 5px;
+}
+
+.container {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 10px;
+  position: relative;
+  z-index: 11;
+}
+
+/* Navbar */
+
+.navbar {
+  position: fixed;
+  bottom: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 5px 2px -2px rgba(0, 0, 0, 0.2);
+  background-color: var(--primary-color);
+  z-index: 9999;
+}
+
+.navbar-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.nav-name {
+  display: flex;
+  align-items: center;
+}
+
+a.nav-name h5 {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 0;
+  margin: 20px 0;
+}
+
+.nav-logo {
+  display: block;
+  max-width: 40px;
+  margin-right: 10px;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.nav-link {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 2px;
+  line-height: 20px;
+  margin-left: 60px;
+}
+
+.nav-menu-login {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.nav-menu-login .nav-link-login {
+  font-family: "Bai Jamjuree", sans-serif;
+  color: rgb(156, 70, 236);
+  padding: 10px 20px;
+  margin: 10px 20px;
+  font-weight: 500;
+}
+
+.nav-menu-login .nav-link-registration {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-weight: 500;
+  background-color: rgb(156, 70, 236);
+  padding: 10px 30px;
+  margin-left: 10px;
+  border-radius: 25px;
+}
+
+.nav-menu-profile {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.nav-menu-profile .nav-link-logout {
+  display: flex;
+  font-family: "Bai Jamjuree", sans-serif;
+  color: rgb(156, 70, 236);
+  padding: 10px 10px;
+  margin: 10px 0;
+  font-weight: 500;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.nav-menu-profile .nav-link-profile {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 10px 10px;
+}
+
+.nav-logout-img {
+  margin-right: 10px;
+}
+
+.menu-button {
+  display: none;
+}
+
+/* Homepage Hero Section */
+
+.hero-section {
+  padding-top: 200px;
+  padding-bottom: 120px;
+}
+
+.hero-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.main-text-wrapper {
+  margin-right: 20px;
+}
+
+.main-text {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 52px;
+  font-weight: 700;
+}
+
+.secondary-text {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.nav-link-registration.start-now-btn {
+  border-radius: 0;
+  margin: 0;
+}
+
+.hero-more-about-us-btn {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-weight: 500;
+  padding: 5px 5px;
+  margin: 0 40px;
+  border-bottom: 2px solid rgb(156, 70, 236);
+  width: fit-content;
+}
+
+.hero-main-img {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+  border-radius: 20px;
+  margin-left: 20px;
+}
+
+@media only screen and (max-width: 992px) {
+  .main-text-wrapper {
+    margin-right: 0px;
+  }
+
+  .main-text {
+    font-size: 32px;
+  }
+
+  .secondary-text {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .nav-link-registration.start-now-btn {
+    border-radius: 0;
+    margin: 0;
+  }
+
+  .hero-more-about-us-btn {
+    padding: 3px 3px;
+    margin: 0 30px;
+    border-bottom: 2px solid rgb(156, 70, 236);
+    width: fit-content;
+  }
+
+  .hero-main-img {
+    width: 50%;
+    margin-left: 10px;
+  }
+}
+
+/* Sliding Tags Section */
+
+.slider-section {
+  margin-top: 120px;
+  margin-bottom: 150px;
+}
+
+.slider-main-text {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 0;
+}
+
+.tag-list {
+  width: 50rem;
+  max-width: 90vw;
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  gap: 1rem 0;
+  position: relative;
+  padding: 1.5rem 0;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.loop-slider {
+  .inner {
+    display: flex;
+    width: fit-content;
+    animation-name: loop;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: var(--direction);
+    animation-duration: var(--duration);
+  }
+}
+
+.tag {
+  display: flex;
+  align-items: center;
+  gap: 0 0.2rem;
+  color: #e2e8f0;
+  font-size: 0.9rem;
+  background-color: rgb(21, 21, 29);
+  border-radius: 0.4rem;
+  padding: 0.7rem 1rem;
+  margin-right: 1rem;
+  box-shadow: 0 0.1rem 0.2rem rgb(0 0 0 / 20%), 0 0.1rem 0.5rem rgb(0 0 0 / 30%),
+    0 0.2rem 1.5rem rgb(0 0 0 / 40%);
+}
+
+.tag span {
+  font-size: 1.2rem;
+  color: rgb(156, 70, 236);
+}
+
+.fade {
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    rgb(21, 21, 29),
+    transparent 30%,
+    transparent 70%,
+    rgb(21, 21, 29)
+  );
+  position: absolute;
+  inset: 0;
+}
+
+@keyframes loop {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Landing Tab Section */
+
+.landing-tab-section {
+  margin: 60px 0;
+  padding: 0 10px;
+}
+
+.landing-tab-wrapper {
+  background-image: url("../public/img/landing-tab-img.png");
+  background-color: rgb(21, 21, 29);
+  background-blend-mode: screen;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  margin: 0 auto;
+  max-width: 1500px;
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 90deg;
+  inherits: true;
+}
+
+@property --gradX {
+  syntax: "<percentage>";
+  initial-value: 50%;
+  inherits: true;
+}
+
+@property --gradY {
+  syntax: "<percentage>";
+  initial-value: 0%;
+  inherits: true;
+}
+
+.blurred-box {
+  box-sizing: border-box;
+  backdrop-filter: blur(5px);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+  border: 5px solid;
+  border-image: radial-gradient(
+      ellipse at var(--gradX) var(--gradY),
+      var(--c1),
+      var(--c1) 10%,
+      var(--c2) 40%
+    )
+    30;
+  animation: borderRadial var(--d) linear infinite forwards;
+}
+
+@keyframes borderRotate {
+  100% {
+    --angle: 420deg;
+  }
+}
+
+@keyframes borderRadial {
+  20% {
+    --gradX: 100%;
+    --gradY: 50%;
+  }
+  40% {
+    --gradX: 100%;
+    --gradY: 100%;
+  }
+  60% {
+    --gradX: 50%;
+    --gradY: 100%;
+  }
+  80% {
+    --gradX: 0%;
+    --gradY: 50%;
+  }
+  100% {
+    --gradX: 50%;
+    --gradY: 0%;
+  }
+}
+
+.landing-tab-content-wrapper {
+  margin: 0 auto;
+  padding: 50px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.landing-tab-img {
+  display: block;
+  max-width: 20%;
+  margin-right: 60px;
+}
+
+.landing-tab-main-text {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.landing-tab-secondary-text {
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.75);
+  max-width: 600px;
+  padding-left: 20px;
+}
+
+.landing-tab-secondary-text li {
+  padding-bottom: 10px;
+}
+
+@media only screen and (max-width: 992px) {
+  .landing-tab-main-text {
+    font-size: 24px;
+  }
+
+  .landing-tab-secondary-text {
+    font-size: 16px;
+  }
+}
+
+/* Who We Are Section */
+
+.who-we-are-section {
+  margin: 200px 0;
+}
+
+.who-we-are-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.who-we-are-text {
+  margin-right: 50px;
+}
+
+.who-we-are-main-text {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 56px;
+  font-weight: 700;
+}
+
+.who-we-are-secondary-text {
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.75);
+  max-width: 500px;
+}
+
+.who-we-are-btn-team {
+  margin-top: 40px;
+}
+
+.who-we-are-btn {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-weight: 500;
+  border: 2px solid rgb(156, 70, 236);
+  padding: 10px 30px;
+}
+
+.who-we-are-numbers-content-wrapper {
+  display: flex;
+}
+
+.who-we-are-numbers {
+  margin-left: 50px;
+}
+
+.who-we-are-numbers-wrapper {
+  border-left: 2px solid rgba(255, 255, 255, 0.75);
+  padding: 0 30px;
+}
+
+.who-we-are-numbers-wrapper:nth-child(1) {
+  margin-bottom: 50px;
+}
+
+.who-we-are-numbers-content {
+  padding: 10px 0px;
+}
+
+.who-we-are-numbers-content-bigger-text {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 46px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.who-we-are-numbers-content-smaller-text {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  padding: 20px 0;
+  color: rgb(156, 70, 236);
+  text-transform: uppercase;
+  margin: 0;
+}
+
+@media only screen and (max-width: 992px) {
+  .who-we-are-text {
+    margin-right: 10px;
+  }
+
+  .who-we-are-main-text {
+    font-size: 30px;
+  }
+
+  .who-we-are-secondary-text {
+    font-size: 14px;
+  }
+
+  .who-we-are-btn {
+    padding: 5px 30px;
+  }
+
+  .who-we-are-numbers-content-bigger-text {
+    font-size: 26px;
+  }
+
+  .who-we-are-numbers-content-smaller-text {
+    font-size: 10px;
+    padding: 20px 0;
+  }
+}
+
+/* Start Now Section */
+
+.start-now-section {
+  margin: 60px 0;
+  padding: 0 10px;
+}
+
+.start-now-wrapper {
+  background-image: url("../public/img/start-now-img.webp");
+  background-color: rgb(21, 21, 29);
+  background-blend-mode: soft-light;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  margin: 0 auto;
+  max-width: 1500px;
+  border-radius: 25px;
+  border: 2px solid rgb(156, 70, 236);
+  overflow: hidden;
+}
+
+.start-now-blurred-box {
+  position: absolute;
+  z-index: 10;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+.start-now-content-wrapper {
+  padding: 180px 0;
+}
+
+.start-now-main-text {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.start-now-btn-team {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+.start-now-btn {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-weight: 500;
+  background-color: rgb(156, 70, 236);
+  border-radius: 10px;
+  padding: 20px 60px;
+}
+
+/* Footer */
+
+.footer {
+  background-color: rgb(16, 16, 29);
+  margin-top: 150px;
+}
+
+.footer-padding-global {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-content {
+  padding: 80px 100px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-content-logo {
+  display: flex;
+  align-items: center;
+}
+
+.footer-logo {
+  max-width: 80px;
+}
+
+.footer-content-heading {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 30px;
+}
+
+.footer-social-media-icon {
+  display: block;
+  text-align: center;
+}
+
+.footer-content-link {
+  color: var(--secondary-color);
+  font-size: 20px;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.copyright {
+  padding: 30px 0;
+}
+
+.copyright-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.privacy-policy {
+  margin-right: 30px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.terms-and-conditions {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.copyright-text {
+  font-family: "Bai Jamjuree", sans-serif;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* Login Page */
+
+.login-section {
+  margin-top: 150px;
+}
+
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-content {
+  display: flex;
+  justify-content: center;
+  background-image: linear-gradient(
+    45deg,
+    rgb(191, 149, 229),
+    rgb(119, 200, 238)
+  );
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+  padding: 50px;
+}
+
+.login-content-wrapper {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  width: 100%;
+  padding: 50px 40px;
+}
+
+.login-main-text {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 48px;
+  font-weight: 500;
+  max-width: 500px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.login-main-secondary-text {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0 auto;
+  max-width: 500px;
+  margin-bottom: 30px;
+}
+
+.login-form-highlighted-word {
+  color: rgb(156, 70, 236);
+}
+
+.login-form-img {
+  display: block;
+  margin: 0 auto;
+  max-width: 50%;
+}
+
+.login-form {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.login-welcome-back-text {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 38px;
+  font-weight: 500;
+  margin: 0;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.login-secondary-text {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 18px;
+  font-weight: 400;
+  max-width: 500px;
+  margin: 0;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.login-email-wrapper {
+  margin-top: 10px;
+  position: relative;
+  width: 100%;
+}
+
+.login-form-content #email {
+  display: block;
+  padding: 15px 50px;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 10px;
+  border: 0px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.login-email-icon-wrapper {
+  display: block;
+  position: absolute;
+  padding: 10px 10px;
+  top: 0;
+  right: left;
+}
+
+.login-password-wrapper {
+  margin-top: 20px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.login-form-content #password {
+  display: block;
+  padding: 15px 50px;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 10px;
+  border: 0px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.login-password-icon-wrapper {
+  display: block;
+  position: absolute;
+  padding: 10px 10px;
+  top: 0;
+  right: left;
+}
+
+.forgot-password {
+  display: block;
+  color: rgb(156, 70, 236);
+  font-size: 14px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.login-form-content #login-submit {
+  display: block;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px;
+  background-color: rgb(156, 70, 236);
+  color: var(--secondary-color);
+  border: 0;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.login-line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 20px;
+}
+
+.login-hr-line {
+  width: 100%;
+  align-self: center;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+}
+
+.login-text-or {
+  margin: 0;
+  margin: 0 10px;
+}
+
+.google-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.login-sign-up {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-sign-up-btn {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.login-sign-up-btn-color {
+  color: rgb(156, 70, 236);
+}
+
+/* Registration page */
+
+.registration-section {
+  margin-top: 180px;
+  padding-bottom: 80px;
+}
+
+.registration-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.registration-content {
+  display: flex;
+  justify-content: center;
+  background-image: linear-gradient(
+    45deg,
+    rgb(191, 149, 229),
+    rgb(119, 200, 238)
+  );
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+  padding: 50px;
+}
+
+.registration-content-wrapper {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  width: 100%;
+  padding: 50px 40px;
+}
+
+.registration-form {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.registration-main-text {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 38px;
+  font-weight: 500;
+  max-width: 500px;
+  margin: 0;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.registration-secondary-text {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 18px;
+  font-weight: 400;
+  max-width: 500px;
+  margin: 0;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.registration-full-name-fields {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.registration-form-content #name {
+  display: block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 10px;
+  border: 0px;
+  margin-right: 20px;
+}
+
+.registration-form-content #surname {
+  display: block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 10px;
+  border: 0px;
+}
+
+.registration-username-field {
+  margin-bottom: 30px;
+}
+
+.registration-form-content #username {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 10px;
+  border: 0px;
+}
+
+.registration-email-field {
+  margin-bottom: 30px;
+}
+
+.registration-form-content #email {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 10px;
+  border: 0px;
+}
+
+.registration-password-fields {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.registration-password-wrapper {
+  margin-top: 10px;
+  position: relative;
+  margin-right: 20px;
+}
+
+.registration-form-content #password {
+  display: block;
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 10px;
+  border: 0px;
+}
+
+.registration-password-show-icon-wrapper {
+  display: block;
+  position: absolute;
+  padding: 10px 10px;
+  top: 0;
+  right: 0;
+}
+
+.registration-password-hide-icon-wrapper {
+  display: none;
+  position: absolute;
+  padding: 10px 10px;
+  top: 0;
+  right: 0;
+}
+
+.registration-confirm-password-wrapper {
+  margin-top: 10px;
+  position: relative;
+}
+
+.registration-form-content #confirm-password {
+  display: block;
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 10px;
+  border: 0px;
+}
+
+.registration-confirm-password-show-icon-wrapper {
+  display: block;
+  position: absolute;
+  padding: 10px 10px;
+  top: 0;
+  right: 0;
+}
+
+.registration-confirm-password-hide-icon-wrapper {
+  display: none;
+  position: absolute;
+  padding: 10px 10px;
+  top: 0;
+  right: 0;
+}
+
+.checkmark {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.ua-pp-text {
+  margin-left: 10px;
+  font-size: 14px;
+}
+
+.ua-pp-highlighted-text {
+  color: rgb(156, 70, 236);
+}
+
+.registration-form-content #registration-submit {
+  display: block;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px;
+  background-color: rgb(156, 70, 236);
+  color: var(--secondary-color);
+  border: 0;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.registration-line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 20px;
+}
+
+.registration-hr-line {
+  width: 100%;
+  align-self: center;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+}
+
+.registration-text-or {
+  margin: 0;
+  margin: 0 10px;
+}
+
+.google-registration {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.registration-sign-up {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.registration-sign-up-btn {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.registration-sign-up-btn-color {
+  color: rgb(156, 70, 236);
+}
+
+/* Learn Page */
+
+.filter-section {
+  margin: 100px 0;
+  margin-top: 150px;
+}
+
+.filter-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filter-block-main-text {
+  font-family: "Bai Jamjuree", sans-serif;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.search-content-wrapper {
+  float: right;
+}
+
+.search-content {
+  margin-top: 10px;
+  position: relative;
+  margin-right: 20px;
+  max-width: 300px;
+}
+
+.search-icon-wrapper {
+  display: block;
+  position: absolute;
+  padding: 10px 20px;
+  top: 0;
+  right: 0;
+}
+
+.search-icon-img {
+  cursor: pointer;
+}
+
+.search-content #search {
+  padding: 15px 30px;
+  padding-right: 60px;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 25px;
+  border: 0px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.create-new-project-wrapper {
+  margin-bottom: 30px;
+}
+
+.create-new-project-btn {
+  background-color: rgb(156, 70, 236);
+  padding: 20px 34px;
+  border-radius: 25px;
+  display: inline-block;
+}
+
+.create-new-project-wrapper-content {
+  display: flex;
+  align-items: center;
+}
+
+.plus-icon-img {
+  margin-right: 20px;
+  display: block;
+}
+
+.create-new-project-text {
+  font-size: 20px;
+  margin: 0;
+}
+
+.learning-material-list {
+  margin: 100px 0;
+}
+
+.learning-material-main-text {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.learning-material-grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-column-gap: 30px;
+  grid-row-gap: 40px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.learning-material-single-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border: 2px solid white;
+  border-radius: 10px;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.single-item-img-wrapper {
+  flex: 1;
+  cursor: pointer;
+}
+
+.single-item-img {
+  max-width: 80%;
+}
+
+.learning-material-single-item-content {
+  margin-left: 10px;
+  flex: 1;
+}
+
+.learning-material-single-item-heading {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  overflow: hidden;
+  display: -webkit-box;
+  max-width: 200px;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+.learning-material-single-item-description {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 14px;
+  font-weight: 400;
+  overflow: hidden;
+  max-width: 200px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  white-space: pre-wrap;
+}
+
+/* Profile Page */
+
+.nav-profile {
+  margin-top: 140px;
+  margin-bottom: 80px;
+}
+
+.nav-profile-main-text {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.nav-profile-secondary-text {
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.75);
+  max-width: 500px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.nav-profile-links-wrapper {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(32, 32, 44);
+  border-radius: 15px;
+  padding: 10px 10px;
+}
+
+.nav-profile-link-selected {
+  padding: 10px 20px;
+  background-color: rgb(156, 70, 236);
+  border-radius: 8px;
+  margin: 0 20px;
+}
+
+.nav-profile-link {
+  padding: 10px 20px;
+  color: rgba(255, 255, 255, 0.75);
+  margin: 0 20px;
+}
+
+.profile-account-section {
+  margin-bottom: 100px;
+}
+
+.profile-data-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.profile-data-wrapper-single-item {
+  background-color: rgb(32, 32, 44);
+  border-radius: 15px;
+  padding: 15px 40px;
+  margin-bottom: 20px;
+}
+
+.profile-data-wrapper-single-item-text-label {
+  font-family: "Lato", sans-serif;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: 400;
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+.profile-data-wrapper-single-item-text {
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.profile-data-make-changes-btn {
+  display: block;
+  padding: 15px 80px;
+  background-color: rgb(156, 70, 236);
+  border-radius: 8px;
+  margin: 0 auto;
+  margin-top: 25px;
+  text-align: center;
+}
+
+.profile-data-inputs #name {
+  border-color: rgb(156, 70, 236);
+  border-radius: 8px;
+  padding: 15px 20px;
+  padding-right: 40px;
+  background-color: rgb(32, 32, 44);
+  color: white;
+}
+
+.profile-data-inputs #surname {
+  border-color: rgb(156, 70, 236);
+  border-radius: 8px;
+  padding: 15px 20px;
+  padding-right: 40px;
+  background-color: rgb(32, 32, 44);
+  color: white;
+}
+
+.profile-data-inputs #username {
+  border-color: rgb(156, 70, 236);
+  border-radius: 8px;
+  padding: 15px 20px;
+  padding-right: 40px;
+  background-color: rgb(32, 32, 44);
+  color: white;
+}
+
+.profile-data-inputs #email {
+  border-color: rgb(156, 70, 236);
+  border-radius: 8px;
+  padding: 15px 20px;
+  padding-right: 40px;
+  background-color: rgb(32, 32, 44);
+  color: white;
+}
+
+.change-password-wrapper {
+  margin-top: 10px;
+  position: relative;
+  margin-right: 20px;
+}
+
+.profile-data-inputs #oldPassword {
+  border-color: rgb(156, 70, 236);
+  background-color: rgb(32, 32, 44);
+  border-radius: 8px;
+  padding: 15px 20px;
+  padding-right: 40px;
+  color: white;
+}
+
+.profile-data-inputs #password {
+  border-color: rgb(156, 70, 236);
+  background-color: rgb(32, 32, 44);
+  border-radius: 8px;
+  padding: 15px 20px;
+  padding-right: 40px;
+  color: white;
+}
+
+.profile-data-inputs #confirmPassword {
+  border-color: rgb(156, 70, 236);
+  background-color: rgb(32, 32, 44);
+  border-radius: 8px;
+  padding: 15px 20px;
+  padding-right: 40px;
+  color: white;
+}
+
+.change-old-password-show-icon-wrapper {
+  display: block;
+  position: absolute;
+  padding: 15px 15px;
+  top: 0;
+  right: 0;
+}
+
+.change-old-password-hide-icon-wrapper {
+  display: none;
+  position: absolute;
+  padding: 15px 15px;
+  top: 0;
+  right: 0;
+}
+
+.change-password-show-icon-wrapper {
+  display: block;
+  position: absolute;
+  padding: 15px 15px;
+  top: 0;
+  right: 0;
+}
+
+.change-password-hide-icon-wrapper {
+  display: none;
+  position: absolute;
+  padding: 15px 15px;
+  top: 0;
+  right: 0;
+}
+
+.change-confirm-password-show-icon-wrapper {
+  display: block;
+  position: absolute;
+  padding: 15px 15px;
+  top: 0;
+  right: 0;
+}
+
+.change-confirm-password-hide-icon-wrapper {
+  display: none;
+  position: absolute;
+  padding: 15px 15px;
+  top: 0;
+  right: 0;
+}
+
+/* New Project Page */
+
+.new-project-section {
+  margin-top: 140px;
+  margin-bottom: 80px;
+}
+
+.new-project-menu {
+  margin-bottom: 30px;
+}
+
+.project-details {
+  display: flex;
+}
+
+.new-project-input-wrapper #title {
+  display: block;
+  border-color: rgb(156, 70, 236);
+  border-radius: 8px;
+  padding: 15px 20px;
+  padding-right: 40px;
+  margin: 10px 0;
+  margin-right: 20px;
+}
+
+.new-project-input-wrapper #description {
+  display: block;
+  border-color: rgb(156, 70, 236);
+  border-radius: 8px;
+  padding: 15px 20px;
+  padding-right: 40px;
+  margin: 10px 0;
+  margin-right: 20px;
+}
+
+.new-project-public-wrapper {
+  margin-right: 20px;
+}
+
+.new-project-public-label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.new-project-public-wrapper #public {
+  padding: 15px 40px;
+  border-color: rgb(156, 70, 236);
+  border-radius: 8px;
+}
+
+.new-project-photo-label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.new-project-select-img-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.new-project-photo-wrapper #photo {
+  display: block;
+  padding: 15px 40px;
+  border-color: rgb(156, 70, 236);
+  border-radius: 8px;
+}
+
+.new-project-photo {
+  padding: 0 10px;
+  width: 10%;
+}
+
+.new-project-save-btn {
+  display: block;
+  padding: 15px 80px;
+  background-color: rgb(156, 70, 236);
+  border-radius: 8px;
+  margin: 0 auto;
+  margin-top: 30px;
+  text-align: center;
+}
+
+/* Public Profile Page */
+
+.public-profile-section {
+  margin-top: 140px;
+  margin-bottom: 80px;
+}
+
+.project-section {
+  margin-top: 140px;
+  margin-bottom: 80px;
+}
+
+.project-section-title-description {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.project-section-title-wrapper {
+  margin-right: 60px;
+}
+
+.project-section-label {
+  color: rgb(156, 70, 236);
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.project-section-title {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.project-section-description-wrapper {
+  margin-right: 60px;
+}
+
+.project-section-description {
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.project-section-content {
+  padding: 20px;
+  border-radius: 15px;
+  background-color: white;
+  color: black;
+  min-height: 600px;
+}
+
+.project-section-content a {
+  color: rgb(5, 99, 193);
+}
+
+.tox-fullscreen {
+  margin-top: 80px !important;
+}
+
+.project-auth-user-btns {
+  display: flex;
+}
+
+.my-projects-empty {
+  padding: 100px 0;
+  border: 2px solid white;
+  border-radius: 10px;
+}
+
+.my-projects-empty-text {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* About Us */
+
+.our-story-section {
+  margin-top: 20px;
+  padding-top: 120px;
+  margin-bottom: 80px;
+  background-image: url("pages/img/mesh-gradient-bg.png");
+  background-position: top;
+  background-blend-mode: soft-light;
+  background-repeat: no-repeat;
+  background-color: rgb(21, 21, 29);
+  background-size: 700px;
+}
+
+.our-mission {
+  margin: 20px 0;
+}
+
+.our-mission-main-text {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 40px;
+  margin: 0;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.our-story-main-secondary-text {
+  font-size: 20px;
+  font-weight: 400;
+  max-width: 400px;
+  text-align: center;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.our-story {
+  margin: 50px auto;
+  max-width: 800px;
+}
+
+.our-story-text-line-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.white-line-about-us {
+  height: 3px;
+  width: 100%;
+  background: linear-gradient(0.25turn, #ffffff00, #ffffff);
+  box-sizing: border-box;
+  margin-right: 20px;
+}
+
+.our-story-main-text {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 38px;
+  margin: 0;
+  margin-bottom: 20px;
+  font-weight: 500;
+  white-space: nowrap;
+  margin-right: 60px;
+}
+
+.our-story-secondary-text {
+  font-size: 18px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.75);
+  display: inline;
+}
+
+.our-story-secondary-text-break {
+  padding-bottom: 15px;
+}
+
+.our-founder-section {
+  margin: 120px 0;
+}
+
+.our-founder-main-text {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 40px;
+  margin: 0;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.our-founder-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+  border: 2px solid white;
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 30px 0;
+  border-radius: 20px;
+  background-color: rgb(32, 32, 44);
+}
+
+.ceo-picture {
+  max-width: 45%;
+  margin-right: 40px;
+}
+
+.our-founder-name {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 32px;
+  margin: 0;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.our-founder-title {
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  margin: 0;
+  font-weight: 600;
+  text-align: left;
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 20px;
+}
+
+.our-founder-social-media-icons-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.our-founder-social-media-icon {
+  display: block;
+  text-align: left;
+  margin-right: 15px;
+}
+
+.address-section {
+  margin: 150px 0;
+}
+
+.address-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.address-content {
+  margin-left: 60px;
+}
+
+.address-name-main-text {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 42px;
+  margin: 0;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+.address-info {
+  font-family: "Lato", sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  margin: 0;
+  margin-bottom: 10px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.address-country {
+  font-family: "Lato", sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  margin: 0;
+  margin-bottom: 20px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.address-social-media {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.address-social-media-single-text {
+  margin-left: 15px;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.address-social-media-single-text-email {
+  margin-left: 15px;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.address-go-to-contact-wrapper {
+  display: inline-block;
+}
+
+.address-go-to-contact {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.address-go-to-contact-text {
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0;
+  margin-right: 20px;
+}
+
+.address-go-to-contact-btn {
+  display: flex;
+  padding: 10px;
+  background-color: rgb(156, 70, 236);
+  border-radius: 50%;
+}
+
+.about-us-img {
+  max-width: 30%;
+}
+
+/* Default Page */
+
+.default-page-hero-section {
+  margin-top: 50px;
+}
+
+.default-page-background-wrapper {
+  padding: 150px 0;
+  background-image: url("../public/img/landscape-img.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.default-page-background-wrapper .privacy-policy {
+  padding: 150px 0;
+  background-image: url("../public/img/landscape-img.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.default-page-background-wrapper .faq {
+  padding: 150px 0;
+  background-image: url("../public/img/landscape-img.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.default-page-hero-secondary-text-wrapper {
+  display: flex;
+  align-content: center;
+}
+
+.default-page-hero-secondary-text {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 18px;
+  font-weight: 400;
+  max-width: 500px;
+  margin-right: 30px;
+}
+
+.default-page-hero-main-text {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 40px;
+  margin: 0;
+  font-weight: 700;
+}
+
+.default-page-hero-date {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 20px;
+  font-weight: 400;
+  max-width: 500px;
+}
+
+.default-page-section {
+  margin-top: 80px;
+  margin-bottom: 250px;
+}
+
+.default-page-section-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.default-page-section-header {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 32px;
+  margin: 0;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+.default-page-section-wrapper {
+  margin-bottom: 80px;
+}
+
+.default-page-section-text {
+  font-size: 18px;
+  font-weight: 400;
+  max-width: 500px;
+}
+
+/* Contact Page */
+
+.lets-talk-section {
+  margin-top: 140px;
+}
+
+.lets-talk-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lets-talk-text {
+  margin-right: 50px;
+}
+
+.lets-talk-main-text {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 52px;
+  margin: 0;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+.lets-talk-secondary-text {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 24px;
+  font-weight: 400;
+  max-width: 500px;
+  margin-right: 30px;
+}
+
+.lets-talk-img {
+  max-width: 30%;
+  margin-left: 50px;
+}
+
+.contact-form-section {
+  margin: 100px 0;
+}
+
+.contact-form-wrapper {
+  padding: 80px;
+  border: 2px solid white;
+  border-radius: 20px;
+  background-color: rgb(32, 32, 44);
+}
+
+.contact-form-text {
+  margin: 30px 0;
+}
+
+.contact-form-main-text {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 32px;
+  margin: 0;
+  font-weight: 700;
+}
+
+.contact-form-secondary-text {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.contact-form-inputs-wrapper {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-form-inputs #name {
+  display: block;
+  margin: 20px 0;
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 10px;
+  border: 0px;
+  min-width: 250px;
+}
+
+.contact-form-inputs #surname {
+  display: block;
+  margin: 20px 0;
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 10px;
+  border: 0px;
+  min-width: 250px;
+}
+
+.contact-form-inputs #email {
+  display: block;
+  margin: 20px 0;
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 10px;
+  border: 0px;
+  min-width: 250px;
+}
+
+.contact-form-inputs #textarea {
+  display: block;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 10px;
+  border: 0px;
+  font-family: "Lato", sans-serif;
+  min-height: 150px;
+  min-width: 500px;
+  max-width: 500px;
+  max-height: 300px;
+}
+
+.contact-us-submit {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 15px 80px;
+  background-color: rgb(156, 70, 236);
+  border-radius: 10px;
+}
+
+.contact-us-img {
+  max-width: 40%;
+  margin-left: 50px;
+}
+
+/* Forgot Password Page */
+
+.forgot-password-section {
+  margin-top: 300px;
+  margin-bottom: 200px;
+}
+
+.forgot-password-form-content {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.forgot-password-main-text {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+  max-width: 500px;
+  margin: 0;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.forgot-password-form-content #email {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 10px;
+  border: 0px;
+  margin-bottom: 30px;
+}
+
+.forgot-password-form-content #forgot-password-submit {
+  display: block;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px;
+  background-color: rgb(156, 70, 236);
+  color: var(--secondary-color);
+  border: 0;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+
+.forgot-password-login-btn {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 20px;
+}
+
+.forgot-password-login-btn-color {
+  color: rgb(156, 70, 236);
+}
+
+.reset-password-section {
+  margin-top: 250px;
+  margin-bottom: 150px;
+}
+
+.reset-password-single-item {
+  margin-bottom: 30px;
+}
+
+.reset-password-wrapper {
+  margin-top: 10px;
+  position: relative;
+}
+
+.reset-password #password {
+  border-radius: 8px;
+  padding: 15px 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.reset-password #confirmPassword {
+  border-radius: 8px;
+  padding: 15px 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
